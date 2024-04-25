@@ -7,6 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -
+        name: Checkout code
+        uses: actions/checkout@v4
+      -
+        name: Build
+        run: go build -v./...
+
+      -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       -
@@ -17,9 +24,8 @@ jobs:
    needs: build
    runs-on: ubuntu-latest
    steps:
-   - uses: actions/checkout@v4
    - name: Run Unit Tests
-     run: go test
+     run: go test -v ./...
 
   deploy:
     needs: test
