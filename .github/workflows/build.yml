@@ -38,7 +38,7 @@ jobs:
         with:
           push: true
           tags: |
-          latest
-          v1.0
+           latest
+           v1.0
 
 
