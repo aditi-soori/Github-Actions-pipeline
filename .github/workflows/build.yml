@@ -4,6 +4,7 @@ on: push
 
 jobs:
   test:
+   runs-on: ubuntu-latest
    steps:
    - uses: actions/checkout@v2
    - name: Run Unit Tests
@@ -11,6 +12,7 @@ jobs:
 
   build:
     needs: test
+    runs-on: ubuntu-latest
     steps:
       -
         name: Set up QEMU
