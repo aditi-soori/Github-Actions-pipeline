@@ -8,7 +8,7 @@ on:
 jobs:
   test:
    steps:
-   - uses: actions/checkout@v4
+   - uses: actions/checkout@v2
    - name: Run Unit Tests
      run: go test
 
